@@ -1,10 +1,10 @@
 <template>
-  <div class="indicator m-4">
+  <div class="indicator m-4 w-5/6">
     <span class="indicator-item badge badge-primary">{{ getSummedEcts }}/30</span>
     <div class="card p-4 bg-base-100 shadow-xl">
       <div class="card-body">
-        <h2 class="card-title">Semester {{ this.semester.semesterNr }}</h2>
-        <div class="flex justify-between gap-x-8">
+        <h2 class="card-title">Semester {{ semester.semesterNr }}</h2>
+        <div v-if="semester.lectures.length > 0" class="flex justify-between gap-x-8">
           <div class="basis-full overflow-x-auto w-full">
             <table class="table table-zebra w-full">
               <thead>
@@ -15,7 +15,7 @@
               </tr>
               </thead>
               <tbody>
-              <tr v-for="lecture in this.semester.lectures">
+              <tr v-for="lecture in semester.lectures">
                 <th>{{ lecture.name }}</th>
                 <td class="text-center">{{ lecture.ects }}</td>
                 <td class="text-center"><span v-show="lecture.grade > 0">{{
@@ -33,7 +33,7 @@
             @newLecture="createNewLecture"
             @updateLecture="editLecture"
             @deleteLecture="deleteLecture"
-            :data="this.semester"
+            :data="semester"
         />
       </div>
     </div>

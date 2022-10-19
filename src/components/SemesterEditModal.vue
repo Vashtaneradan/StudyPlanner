@@ -58,40 +58,43 @@
         <div class="form-control w-full max-w-xs">
           <label class="label">
             <span class="label-text">Vorlesung</span>
-<!--            <span class="label-text-alt">Alt label</span>-->
+            <!--            <span class="label-text-alt">Alt label</span>-->
           </label>
-          <input v-model="data.lectureData.name" required type="text" placeholder="z.B. Mathe" class="input input-bordered w-full max-w-xs" />
+          <input v-model="data.lectureData.name" required type="text" placeholder="z.B. Mathe"
+                 class="input input-bordered w-full max-w-xs"/>
         </div>
         <div class="form-control w-full max-w-xs">
           <label class="label">
             <span class="label-text">ECTS</span>
-<!--            <span class="label-text-alt">Alt label</span>-->
+            <!--            <span class="label-text-alt">Alt label</span>-->
           </label>
-          <input v-model="data.lectureData.ects" required type="number" placeholder="z.B. 5" class="input input-bordered w-full max-w-xs" />
+          <input v-model="data.lectureData.ects" required type="number" placeholder="z.B. 5"
+                 class="input input-bordered w-full max-w-xs"/>
         </div>
         <div class="form-control w-full max-w-xs">
           <label class="label">
             <span class="label-text">Note</span>
             <span class="label-text-alt">1-6</span>
           </label>
-          <input v-model="data.lectureData.grade" required type="number" placeholder="z.B. 2" class="input input-bordered w-full max-w-xs" />
+          <input v-model="data.lectureData.grade" required type="number" placeholder="z.B. 2"
+                 class="input input-bordered w-full max-w-xs"/>
         </div>
         <button class="btn button&#45;&#45;round">➕</button>
 
 
-<!--        <div class="overflow-x-auto">-->
-<!--          <table class="table table-zebra w-full">-->
-<!--            <tr>-->
-<!--              <td><input id="lectureName" type="text" v-model="data.lectureData.name" required></td>-->
-<!--              <td><input id="lectureEcts" type="number" v-model="data.lectureData.ects" required></td>-->
-<!--              <td><input id="lectureGrade" type="number" v-model="data.lectureData.grade"></td>-->
-<!--              <td></td>-->
-<!--              <td>-->
-<!--                <button class="btn button&#45;&#45;round">➕</button>-->
-<!--              </td>-->
-<!--            </tr>-->
-<!--          </table>-->
-<!--        </div>-->
+        <!--        <div class="overflow-x-auto">-->
+        <!--          <table class="table table-zebra w-full">-->
+        <!--            <tr>-->
+        <!--              <td><input id="lectureName" type="text" v-model="data.lectureData.name" required></td>-->
+        <!--              <td><input id="lectureEcts" type="number" v-model="data.lectureData.ects" required></td>-->
+        <!--              <td><input id="lectureGrade" type="number" v-model="data.lectureData.grade"></td>-->
+        <!--              <td></td>-->
+        <!--              <td>-->
+        <!--                <button class="btn button&#45;&#45;round">➕</button>-->
+        <!--              </td>-->
+        <!--            </tr>-->
+        <!--          </table>-->
+        <!--        </div>-->
       </form>
     </template>
 
@@ -124,7 +127,7 @@ export default defineComponent({
     },
   },
   props: {
-    data: Object,
+    data: {type: Object, required: true},
   },
 })
 </script>
