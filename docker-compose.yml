@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  frontend:
+    image: pluswerk/node-dev:latest
+    user: "node"
+    working_dir: /app
+    entrypoint: ""
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/app
+    ports:
+      - "0.0.0.0:5001:5001"
+    command: bash -c "yarn install && yarn dev"
