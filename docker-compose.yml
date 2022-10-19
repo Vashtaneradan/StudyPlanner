@@ -5,8 +5,8 @@ services:
     user: "node"
     working_dir: /app
     entrypoint: ""
-    environment:
-      - NODE_ENV=production
+    #environment:
+    #   - NODE_ENV=production
     volumes:
       - ./:/app
     ports:
